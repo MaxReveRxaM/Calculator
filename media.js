@@ -1,0 +1,191 @@
+window.onload = function() {
+  var result = 0;
+  var display = document.getElementById('display');
+  var numbers_9 = document.getElementById('number_9');
+  var numbers_8 = document.getElementById('number_8');
+  var numbers_7 = document.getElementById('number_7');
+  var numbers_6 = document.getElementById('number_6');
+  var numbers_5 = document.getElementById('number_5');
+  var numbers_4 = document.getElementById('number_4');
+  var numbers_3 = document.getElementById('number_3');
+  var numbers_2 = document.getElementById('number_2');
+  var numbers_1 = document.getElementById('number_1');
+  var numbers_0 = document.getElementById('number_0');
+  var clear = document.getElementById('clear');
+  var plus = document.getElementById('plus');
+  var minus = document.getElementById('minus');
+  var multiply = document.getElementById('multiply');
+  var divide = document.getElementById('divide');
+  var dot = document.getElementById('dot');
+  var result = document.getElementById('result');
+  var backspace = document.getElementById('backspace');
+  var percent = document.getElementById('percent');
+  PermanentMemory = 0;
+  MemoryCurrentNumber = 0;
+  MemoryNewNumber = 0;
+  MemoryPendingOperation = '';
+
+  numbers_9.onclick = function() {
+    if (display.value === '0') {
+      display.value = '9';
+    } else {
+      display.value += '9';
+    };
+  };
+
+  numbers_8.onclick = function() {
+    if (display.value === '0') {
+      display.value = '8';
+    } else {
+      display.value += '8';
+    };
+  };
+
+  numbers_7.onclick = function() {
+    if (display.value === '0') {
+      display.value = '7';
+    } else {
+      display.value += '7';
+    };
+  };
+
+  numbers_6.onclick = function() {
+    if (display.value === '0') {
+      display.value = '6';
+    } else {
+      display.value += '6';
+    };
+  };
+
+  numbers_5.onclick = function() {
+    if (display.value === '0') {
+      display.value = '5';
+    } else {
+      display.value += '5';
+    };
+  };
+
+  numbers_4.onclick = function() {
+    if (display.value === '0') {
+      display.value = '4';
+    } else {
+      display.value += '4';
+    };
+  };
+
+  numbers_3.onclick = function() {
+    if (display.value === '0') {
+      display.value = '3';
+    } else {
+      display.value += '3';
+    };
+  };
+
+  numbers_2.onclick = function() {
+    if (display.value === '0') {
+      display.value = '2';
+    } else {
+      display.value += '2';
+    };
+  };
+
+  numbers_1.onclick = function() {
+    if (display.value === '0') {
+      display.value = '1';
+    } else {
+      display.value += '1';
+    };
+  };
+
+  numbers_0.onclick = function() {
+    if (display.value === '0') {
+      display.value = '0';
+    } else {
+      display.value += '0';
+    };
+  };
+
+  dot.onclick = function() {
+    var display = document.getElementById('display');
+    var localDecimalMemory = display.value;
+
+    if (MemoryNewNumber) {
+      localDecimalMemory = '0.';
+      MemoryNewNumber = false;
+    } else {
+      if (localDecimalMemory.indexOf('.') === -1) {
+        localDecimalMemory += '.';
+      };
+    };
+
+    display.value = localDecimalMemory;
+  };
+
+
+  plus.onclick = function() {
+    MemoryPendingOperation = '+';
+    MemoryCurrentNumber = parseFloat(display.value);
+    display.value = "";
+  }
+
+
+  minus.onclick = function() {
+    MemoryPendingOperation = '-';
+    MemoryCurrentNumber = parseFloat(display.value);
+    display.value = "";
+  }
+
+  multiply.onclick = function() {
+    MemoryPendingOperation = '*';
+    MemoryCurrentNumber = parseFloat(display.value);
+    display.value = "";
+  }
+
+
+  divide.onclick = function() {
+    MemoryPendingOperation = '/';
+    MemoryCurrentNumber = parseFloat(display.value);
+    display.value = "";
+  }
+
+  percent.onclick = function() {
+    MemoryPendingOperation = '%';
+    MemoryCurrentNumber = parseFloat(display.value);
+    display.value = "";
+  }
+
+
+  backspace.onclick = function() {
+    var n = parseFloat(display.value)
+    display.value = "";
+  }
+
+
+
+  clear.onclick = function(e) {
+    display.value = 0;
+  }
+
+
+  result.onclick = function() {
+    MemoryNewNumber = parseFloat(display.value);
+
+    if (MemoryPendingOperation === '+') {
+      result = MemoryNewNumber + MemoryCurrentNumber;
+
+    } else if (MemoryPendingOperation === '-') {
+      result = MemoryCurrentNumber - MemoryNewNumber;
+    } else if (MemoryPendingOperation === '*') {
+      result = MemoryCurrentNumber * MemoryNewNumber;
+    } else if (MemoryPendingOperation === '/') {
+      result = MemoryCurrentNumber / MemoryNewNumber;
+    } else if (MemoryPendingOperation === '%') {
+      result = (MemoryNewNumber / 100) * MemoryCurrentNumber;
+    }
+
+    display.value = result;
+    console.log(MemoryNewNumber + " MemoryNewNumber");
+    console.log(MemoryCurrentNumber + " MemoryCurrentNumber");
+    console.log(PermanentMemory + " PermanentMemory");
+  }
+}

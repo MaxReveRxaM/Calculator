@@ -1,0 +1,104 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+body{
+	background: #999999;
+}
+
+@font-face {
+	font-family: 'digital-7'; /* Гарнитура шрифта */
+	src: url('digital-7.regular.ttf'); /* Путь к файлу со шрифтом */
+}
+
+.calculator{
+	width: 400px;
+	height: 590px;
+	margin: auto;
+	margin-top: 100px;
+	background-color: #000;
+	/* box-shadow: 0 0 30px grey; */
+	border-radius: 10px;
+}
+
+.container{
+	padding: 10px;
+}
+
+.calculator_display{
+
+}
+
+#display{
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+	padding: 0px 5px;
+	font-size: 80px;
+	font-family: 'digital-7';
+	color: #3f3f3f;
+	text-align: right;
+	border: none;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.buttons{
+	margin: 10px 0px;
+}
+
+.buttons > button{
+	width: 87px;
+	height: 87px;
+	background-color: #505050;
+	font-size: 50px;
+	font-weight: bold;
+	color: white;
+	border: none;
+	margin: 0px 3px;
+	outline: 0;
+	transition: all 0.5s;
+	cursor: pointer;
+	/* border-radius: 21px; */
+}
+
+.butt:hover{
+	background-color: #3b3b3b !important;
+}
+
+.butt:active{
+	background-color: #f2f2f2 !important;
+}
+
+.buttons :first-child{
+	margin-left: 0px;
+}
+
+.buttons :last-child{
+	margin-right: 0px;
+}
+
+#percent{
+	border-radius: 0px 0px 0px 10px;
+}
+
+#result{
+	position: absolute;
+	height: 184px;
+	margin-left: 7px;
+	background-color: #CC3333;
+	border-radius: 0px 0px 10px 0px;
+}
+
+#backspace{
+	font-size: 41px;
+}
+
+#result:hover{
+	background-color: #9c2525!important;
+}
+
+#result:active{
+	background-color: #f2f2f2 !important;
+}
