@@ -173,8 +173,8 @@ window.onload = function() {
 
 
   backspace.onclick = function() {
-    var n = parseFloat(display.value)
-    display.value = "";
+    var dis = display.value;
+    display.value = dis.substring(0, dis.length - 1);
   }
 
 
