@@ -27,100 +27,98 @@ window.onload = function() {
   numbers_9.onclick = function() {
     if (display.value === '0') {
       display.value = '9';
-      PermanentMemory = '9';
+      PermanentMemory = 9;
     } else {
       display.value += '9';
-      PermanentMemory = '9';
+      PermanentMemory = 9;
     };
   };
 
   numbers_8.onclick = function() {
     if (display.value === '0') {
       display.value = '8';
-      PermanentMemory = '8';
+      PermanentMemory = 8;
     } else {
       display.value += '8';
-      PermanentMemory += '8';
+      PermanentMemory = 8;
     };
   };
 
   numbers_7.onclick = function() {
     if (display.value === '0') {
       display.value = '7';
-      PermanentMemory += '7';
+      PermanentMemory = 7;
     } else {
       display.value += '7';
-      PermanentMemory += '7';
+      PermanentMemory = 7;
     };
   };
 
   numbers_6.onclick = function() {
     if (display.value === '0') {
       display.value = '6';
-      PermanentMemory = '7';
+      PermanentMemory = 7;
     } else {
       display.value += '6';
-      PermanentMemory += '7';
+      PermanentMemory = 7;
     };
   };
 
   numbers_5.onclick = function() {
     if (display.value === '0') {
       display.value = '5';
-      PermanentMemory += '5';
+      PermanentMemory = 5;
     } else {
       display.value += '5';
-      PermanentMemory = '5';
+      PermanentMemory = 5;
     };
   };
 
   numbers_4.onclick = function() {
     if (display.value === '0') {
       display.value = '4';
-      PermanentMemory = '4';
+      PermanentMemory = 4;
     } else {
       display.value += '4';
-      PermanentMemory += '4';
+      PermanentMemory = 4;
     };
   };
 
   numbers_3.onclick = function() {
     if (display.value === '0') {
       display.value = '3';
-      PermanentMemory = '3';
+      PermanentMemory = 3;
     } else {
       display.value += '3';
-      PermanentMemory += '3';
+      PermanentMemory = 3;
     };
   };
 
   numbers_2.onclick = function() {
     if (display.value === '0') {
       display.value = '2';
-      PermanentMemory = '2';
+      PermanentMemory = 2;
     } else {
       display.value += '2';
-      PermanentMemory += '2';
+      PermanentMemory = 2;
     };
   };
 
   numbers_1.onclick = function() {
     if (display.value === '0') {
       display.value = '1';
-      PermanentMemory = '1';
+      PermanentMemory = 1;
     } else {
       display.value += '1';
-      PermanentMemory += '1';
+      PermanentMemory = 1;
     };
   };
 
   numbers_0.onclick = function() {
     if (display.value === '0') {
       display.value = '0';
-      PermanentMemory = '0';
     } else {
       display.value += '0';
-      PermanentMemory += '0';
     };
   };
 
